@@ -1,0 +1,114 @@
+body.login-page {
+  background: none;
+}
+
+.login-logo a {
+  color: #fff;
+  font-size: 36pt;
+}
+
+html {
+  background: url(/static/img/slynx-background.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.wysihtml5-toolbar > li > a.btn,
+.wysihtml5-toolbar > li > .btn-group > a.btn {
+  height: 34px;
+}
+
+.image-editor .buttons {
+  opacity: 0;
+}
+.image-editor:hover .buttons {
+  opacity: 1;
+}
+
+.selected-image {
+  background-color: #eee;
+}
+
+.mdl-selcols-closebtn {
+  color: #999;
+  margin-top: -6px;
+  vertical-align: top;
+  padding: 2px;
+  opacity: 0.01;
+}
+.mdl-selcols-closebtn:hover {
+  background-color: #eaeaea;
+  border-radius: 4px;
+}
+th:hover .mdl-selcols-closebtn {
+  opacity: 1;
+}
+
+tr.mdl-rowdetails-tr td {
+  padding: 0!important;
+}
+tr.mdl-rowdetails-tr td .mdl-rowdetails-content {
+  padding: 8px;
+
+  -webkit-box-shadow: #F1F1F1 0px 7px 8px -5px inset, #F1F1F1 0px -8px 8px -5px inset;
+  background-color: #FDFDFD;
+  border-collapse: collapse;
+  box-shadow: #F1F1F1 0px 6px 4px -5px inset, #F1F1F1 0px -6px 4px -5px inset;
+}
+
+.syntaxhighlighter-300 {
+  max-height: 250px;
+}
+
+.floatThead-container table {
+  margin: 0!important;
+}
+.floatThead-container {
+  background-color: white;
+}
+
+/* Full screen modals: */
+
+.modal.fullscreen {
+  padding-right: 0!important;
+}
+
+.modal.fullscreen .modal-dialog {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.modal.fullscreen .modal-content {
+  height: 100%;
+  border-radius: 0;
+  padding: 0;
+  background-color: #fff;
+  overflow: auto;
+}
+
+.mdl-sortablerows table tr {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+}
+
+.mdl-sortablerows table tr.ui-sortable-helper td {
+  background-color: #fff;
+}
+.mdl-sortablerows tr.ui-sortable-handle {
+  position: absolu!important;
+}
+
+body {
+  overflow-x: initial;
+  overflow-y: initial;
+}
+
