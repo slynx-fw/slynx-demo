@@ -66,9 +66,9 @@ trait XMonitorStandardPage {
 
     val toastr: Lib = "//cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.2/toastr.min.js"
 
-    val jquery_data_tables: Lib = "//cdnjs.cloudflare.com/ajax/datatables/jquery.dataTables.min.js"
-    val data_tables_bootstrap: Lib = "//cdnjs.cloudflare.com/ajax/datatables/dataTables.bootstrap.min.js"
-    val jquery_floatThead: Lib = "//cdnjs.cloudflare.com/ajax/mkoryak-floatThead/jquery.floatThead.min.js"
+    val jquery_data_tables: Lib = "//cdnjs.cloudflare.com/ajax/libs/datatables/1.10.10/js/jquery.dataTables.js"
+    val data_tables_bootstrap: Lib = "//cdnjs.cloudflare.com/ajax/libs/datatables/1.10.10/js/dataTables.bootstrap.min.js"
+    val jquery_floatThead: Lib = "//cdnjs.cloudflare.com/ajax/libs/floatthead/1.3.1/jquery.floatThead.js"
 
     val jquery_flot: Lib = "//cdnjs.cloudflare.com/ajax/flot/jquery.flot.min.js"
     val jquery_flot_time: Lib ="//cdnjs.cloudflare.com/ajax/flot/jquery.flot.time.js"
