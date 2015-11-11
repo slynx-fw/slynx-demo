@@ -1,6 +1,7 @@
 package controllers
 
 import java.io.{ByteArrayInputStream, ByteArrayOutputStream}
+import java.net.URL
 
 import code.model._
 import net.coobird.thumbnailator.Thumbnailator
@@ -32,7 +33,7 @@ case class State(
                   var user: Option[User] = None,
                   var redirectTo: String = "/",
                   props: collection.mutable.Map[String, String] = collection.mutable.Map[String, String]()
-                  )
+                )
 
 object RootController extends Controller with XSessionSupport with XMonitor {
 
@@ -81,6 +82,9 @@ object RootController extends Controller with XSessionSupport with XMonitor {
 
             // Resources:
             case p@ParsePath("static" :: _, _, _, _) => serveFile(p)
+            // IMDB images, like: http://ia.media-imdb.com/images/M/MV5BNDYyMDgxNDQ5Nl5BMl5BanBnXkFtZTcwMjc1ODg3OA@@._V1_.jpg
+            // Stream this response:
+            case p@ParsePath("imdb" :: path, _, _, _) => Some(Future(Ok.chunked(Enumerator.fromStream(new URL("http://ia.media-imdb.com/" + path.mkString("/")).openStream()))))
 
             // Unauthenticated:
             case ParsePath("login" :: Nil, _, _, _) => if (xsh.s.user.isEmpty) @@("pages", "login")(new Login()) else Some(Future[Result](TemporaryRedirect("/")))

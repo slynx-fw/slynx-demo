@@ -47,9 +47,9 @@ class RowDetailsOnClickTablePage()(implicit val xsh: XSPageHandle) extends MenuP
                 <p>
                   <img style="float:left;max-height:150px;margin: 20px;" onclick={xsh.ajaxInvoke(() => TH.SimpleModal(
                     row.getTitle,
-                    (_, _) => <div style="text-align:center;"><img src={row.getImage.getUrl} style="max-height:600px;"></img></div>,
+                    (_, _) => <div style="text-align:center;"><img src={row.getImage.getUrl.replaceAllLiterally("http://ia.media-imdb.com/", "/imdb/")} style="max-height:600px;"></img></div>,
                     modalOnSaveClientSideF = (modal, _) => modal.hideAndDestroy()
-                  ).showAndInstall()).toJsCmd} src={row.getImage.getUrl}></img>
+                  ).showAndInstall()).toJsCmd} src={row.getImage.getUrl.replaceAllLiterally("http://ia.media-imdb.com/", "/imdb/")}></img>
                   <h3>{row.getTitle} ({row.getYear})</h3>
                   <b>Type:</b> {row.getType} <br/>
                   <b>Rating:</b> {row.getRating} <br/>

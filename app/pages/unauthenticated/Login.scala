@@ -47,7 +47,9 @@ class Login()(implicit val xsh: XSPageHandle) extends (NodeSeq => NodeSeq) {
       }).toJsCmd
 
     "#login-btn [onclick]" #> login &
+      "#email-input [value]" #> "demo@slynx.org" &
       "#email-input [onkeyup]" #> Run(s"{var e = event || window.event; if ((e.keyCode ? e.keyCode : e.which) == 13) { $login }}") &
+      "#password-input [value]" #> "demo" &
       "#password-input [onkeyup]" #> Run(s"{var e = event || window.event; if ((e.keyCode ? e.keyCode : e.which) == 13) { $login }}")
   }
 }
