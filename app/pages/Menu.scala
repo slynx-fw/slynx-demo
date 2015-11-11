@@ -83,6 +83,7 @@ object Menu {
   val forms = MenuLink("Forms", "/forms", TH.IcnFA.icn_list)
   val buttons = MenuLink("Buttons", "/buttons", TH.IcnFA.icn_hand_o_up)
   val emails = MenuLink("Emails", "/emails", TH.IcnFA.icn_envelope)
+  val adminSection = MenuLink("Admin Section", "/xadmin/", TH.IcnFA.icn_user)
   val adminLTE = MenuGroup("AdminLTE Sample Pages", TH.IcnFA.icn_folder)(
     MenuGroup("Mailbox", TH.IcnFA.icn_folder)(
       MenuLink("Indox", "/adminlte/mailbox", TH.IcnFA.icn_circle_o),
@@ -103,6 +104,7 @@ object Menu {
     , forms
     , buttons
     , emails
+    , adminSection
     , adminLTE
   )
 
