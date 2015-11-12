@@ -295,7 +295,7 @@ trait XMonitorStandardPage {
               <div class="pull-right hidden-xs">
                 <b>Version</b> 2.3.1
               </div>
-              <strong>Copyright © 2014-2015 <a href="http://almsaeedstudio.com">Almsaeed Studio</a>.</strong> All rights
+              <strong>Copyright © 2015 <a href="http://www.slynx.org">Slynx Framework</a>.</strong> All rights
               reserved.
             </footer>
 
